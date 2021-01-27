@@ -99,7 +99,7 @@ class ToDoList:
     def add_task(self):
         print('\nEnter task')
         task_to_add = input()
-        print('Enter deadline')
+        print('Enter deadline (YYYY-MM-DD')
         deadline = datetime.strptime(input(), '%Y-%m-%d').date()
         new_row = Task(task=task_to_add, deadline=deadline)
         self.session.add(new_row)
